@@ -1,0 +1,442 @@
+:root{
+    --PrimaryColor:rgb(82, 142, 37);
+    --HoverColor:rgb(189, 240, 148);
+    --paleGreen:rgb(223, 248, 206);
+    --whiteColor:rgb(255, 255, 255);
+    --blackColor:rgb(46, 46, 46);
+    --textColor:rgb(121, 121, 124);
+    --bgColor:rgb(238, 239, 241);
+    --greyText:rgb(190,190,190);
+    --inputColor:rgb(248, 246, 247);
+
+    /* Font Typography */
+    --biggestFontSize:2.5rem;
+    --h1FontSize:1.5rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:.938rem;
+    --smallFontSize:.813rem;
+    --smallestFontSize:.75rem;
+}
+
+.topSection{
+    .headerSection{
+        justify-content: space-between;
+
+        .title{
+            h1{
+                font-size: var(--h1FontSize);
+                color:var(--blackColor);
+                font-weight: 700;           
+            }
+    
+            p{
+                font-size: var(--normalFontSize);
+                color: var(--textColor);
+                font-weight: 500;
+            }
+        }
+
+        .adminDiv{
+            gap: 1rem;
+
+            .icon{
+                font-size: var(--biggestFontSize);
+                background: var(--whiteColor);
+                padding: 5px;
+                box-shadow: 0 2px 4px var(--inputColor);
+                color: var(--textColor);
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+            }
+        }
+        
+    }
+
+    .cardSection{
+        margin-top:3rem;
+        gap: 1rem;
+        
+
+        .rightCard{
+            position: relative;
+            flex-basis: 70%;
+            height: 200px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: auto;
+            padding: 2rem;
+            overflow: hidden;
+            border-radius: 1rem;
+            -webkit-border-radius: 1rem;
+            -moz-border-radius: 1rem;
+            -ms-border-radius: 1rem;
+            -o-border-radius: 1rem;
+            .tab-container{
+                .videoDiv{
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    top: 0;right: 0;bottom: 0;left: 0;
+    
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        transition: opacity 0.5s linear;
+                        object-fit: cover;
+                    }
+    
+                }
+                
+                .videoDiv:nth-child(1) img:nth-child(1) {
+                    opacity: 1;
+                }
+
+                .videoDiv:nth-child(2) img:nth-child(2) {
+                    opacity: 1;
+                }
+                .videoDiv:nth-child(3) img:nth-child(3) {
+                    opacity: 1;
+                }
+
+                .videoDiv:nth-child(4) img:nth-child(4) {
+                    opacity: 1;
+                }
+                .videoDiv:nth-child(5) img:nth-child(5) {
+                    opacity: 1;
+                }
+
+                .videoDiv:nth-child(6) img:nth-child(6) {
+                    opacity: 1;
+                }
+                .videoDiv:nth-child(7) img:nth-child(7) {
+                    opacity: 1;
+                }
+                .videoDiv:nth-child(8) img:nth-child(8) {
+                    opacity: 1;
+                }
+                .videoDiv:nth-child(9) img:nth-child(9) {
+                    opacity: 1;
+                }
+                .videoDiv:nth-child(10) img:nth-child(10) {
+                    opacity: 1;
+                }
+            }
+            
+
+            h1,p,.btn{
+                
+                z-index: 100;
+            }
+
+            h1{
+                font-size: var(--h1FontSize);
+                color: var(--whiteColor);
+                font-weight: 800;
+            }
+
+            p{
+                padding: 1rem;
+                color: var(--paleGreen);
+                font-weight: 500;
+            }
+
+            .buttons{
+                gap: 1rem;
+
+                .btn{
+                    box-shadow: none;
+                    padding: .8rem 1.5rem;
+                    color: var(--PrimaryColor);
+                    border: 2px solid transparent;
+                }
+
+                .transparent{
+                    background: none;
+                    border: 2px solid var(--paleGreen);
+                    color: var(--paleGreen);
+
+                    &:hover{
+                        background: var(--paleGreen);
+                        color: var(--PrimaryColor);
+                    }
+                }
+            }
+        }
+
+        .leftCard{
+            flex-basis: 30%;
+            
+            .main{
+                width: 90%;
+                position: relative;
+                padding: 1rem;
+                height: 200px;
+                border-radius: 1rem;
+                justify-content: space-between;
+                -webkit-border-radius: 1rem;
+                -moz-border-radius: 1rem;
+                -ms-border-radius: 1rem;
+                -o-border-radius: 1rem;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height:100% ;
+                    width: 100%;
+                    background: var(--paleGreen);
+                    left: 0;
+                    bottom: 0;
+                    border-radius:1rem ;
+                    -webkit-border-radius:1rem ;
+                    -moz-border-radius:1rem ;
+                    -ms-border-radius:1rem ;
+                    -o-border-radius:1rem ;
+                }
+
+                .textDiv{
+                    z-index: 100;
+                    
+                    h1{
+                        font-size: var(--h1FontSize);
+                        padding-bottom: 1em;
+                        color: var(--blackColor);
+                    }
+
+                    .flex{
+                        gap: 1.5rem;
+                        font-weight: 500;
+                        color: var(--blackColor);
+
+                        small{
+                            font-size: var(--normalFontSize);
+                            display: block;
+                            color: var(--PrimaryColor);
+                            font-weight: 500;
+                            padding: .5rem 0;
+                        }
+                    }
+
+                    .link{
+                        margin-top: 2rem;
+                        cursor: pointer;
+
+                        &:hover{
+                            color: var(--PrimaryColor);
+
+                            .icon{
+                                transform: translateX(10px);
+                                -webkit-transform: translateX(10px);
+                                -moz-transform: translateX(10px);
+                                -ms-transform: translateX(10px);
+                                -o-transform: translateX(10px);
+                                transition:.3s ease ;
+                                -webkit-transition:.3s ease ;
+                                -moz-transition:.3s ease ;
+                                -ms-transition:.3s ease ;
+                                -o-transition:.3s ease ;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .sideBarCard{
+                /* display: none; */
+                width: 50%;
+                padding: 1rem;
+                text-align: center;
+                position: relative;
+             
+                .icon{
+                    position: absolute;
+                    background: var(--HoverColor);
+                    border:10px solid var(--whiteColor);
+                    font-size: 3rem;
+                    border-radius: 50%;
+                    top: -8px;
+                    right: 50%;
+                    transform: translate(50%);
+                    z-index: 100;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    -webkit-transform: translate(50%);
+                    -moz-transform: translate(50%);
+                    -ms-transform: translate(50%);
+                    -o-transform: translate(50%);
+                } 
+
+
+                .cardContent{
+                    position: relative;
+                    padding: 1rem;
+                    background: var(--HoverColor);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    -webkit-border-radius: 10px;
+                    -moz-border-radius: 10px;
+                    -ms-border-radius: 10px;
+                    -o-border-radius: 10px;
+            
+                    h3{
+                        font-size: var(--h3FontSize);
+                        margin-top: 1rem;
+                        padding: 1rem 0;
+                        font-weight: 800;
+                        color: var(--blackColor);
+                    }
+            
+                    p{
+                        font-size: var(--normalFontSize);
+                        color: var(--textColor);
+                        padding-bottom: 1rem;
+                        font-weight: 500;
+                    }
+            
+                    .btn{
+                        position: relative;
+                        color: var(--textColor);
+                        z-index: 1000;
+                    }
+            
+                    .circle1,.circle2{
+                        position: absolute;
+                        background: var(--paleGreen);
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        opacity: .7;
+                    }
+            
+                    .circle1{
+                        height: 100px;
+                        width: 100px;
+                        top: -50px;
+                        left: -50px;
+                    }
+            
+                    .circle2{
+                        height: 150px;
+                        width: 150px;
+                        bottom: -80px;
+                        right: -70px;
+                        z-index: 1;
+                    }
+                }
+            }
+        } 
+
+    }
+}
+
+
+
+/* Media Queries============================> */
+
+@media screen and (max-width:900px){
+    .cardSection{
+        flex-direction:column ;
+
+        .rightCard{
+            width: 100%;
+            flex-basis: 100%;
+        }
+
+         .leftCard{
+            width: 30%;
+            margin-top: 2rem;
+            align-self: flex-start;
+            height: 10px !important;
+/* 
+            .main{
+                width: 100%;
+            } */
+            /* .sideBarCard{
+                display: block !important;
+                
+            } */
+        } 
+
+    }
+}
+
+@media screen and (max-width:725px){
+    .cardSection{
+        .leftCard{
+            .main{
+                width: 70%!important;
+            }
+
+            /* .sideBarCard{
+                display: none!important;
+            } */
+        }
+    }
+
+}
+
+@media screen and (max-width:490px){
+
+    .cardSection{
+        .rightCard{
+            text-align: center;
+
+            .buttons{
+                margin: auto;
+                flex-direction: column;
+
+                .btn{
+                    width: 100%;
+                }
+            }
+        }
+
+        .leftCard{
+            .main{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .textDiv{
+                    margin: auto;
+                }
+
+                &::before{
+                    width: 100%!important;
+                }
+                
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:390px){
+    .topSection{
+        .cardSection{
+            .rightCard{
+                text-align: center;
+                padding: 2rem 1rem;
+
+                h1{
+                    font-size: var(--h2FontSize);
+                }
+
+            }
+        }
+    }
+}

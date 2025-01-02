@@ -1,0 +1,476 @@
+:root{
+    --PrimaryColor:rgb(82, 142, 37);
+    --HoverColor:rgb(189, 240, 148);
+    --paleGreen:rgb(223, 248, 206);
+    --whiteColor:rgb(255, 255, 255);
+    --blackColor:rgb(46, 46, 46);
+    --textColor:rgb(121, 121, 124);
+    --bgColor:rgb(238, 239, 241);
+    --greyText:rgb(190, 190, 190);
+    --inputColor:rgb(248, 246, 247);
+    --itemCardColor:rgb(223, 226, 223);
+    --itemCardHover:rgb(213, 231, 213);
+
+    /* Font Typography */
+    --biggestFontSize:2.5rem;
+    --h1FontSize:1.5rem;
+    --h2FontSize:1.25rem;
+    --h3FontSize:1rem;
+    --normalFontSize:.938rem;
+    --smallFontSize:.813rem;
+    --smallestFontSize:.75rem;
+}
+
+.formContainer{
+    margin: 2rem;
+    overflow: auto;
+    
+    width: 80%;
+    height: 80%;
+    background: var(--whiteColor);
+    padding: 25px 30px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    justify-content:center;
+    align-items:center;
+
+    .formTitle{
+        font-size: var(--h1FontSize);
+        color: var(--PrimaryColor);
+        font-weight: 500;
+        position: relative;
+
+        &::before{ 
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 50px;
+        background: linear-gradient(#bebebe,#bdf094,#528e25);
+        }
+    }
+
+    
+
+    form{
+        /* height: 100%; */
+        .LandDetails{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+            .details{
+                color: var(--blackColor);
+                display: block;
+                font-weight: 500;
+                margin-bottom: 5px;
+            }
+
+            .input-box{
+                margin-bottom: 15px;
+                width: 40%;
+                
+
+                .error{
+                    color: red;
+                    font-size: 10px;
+                    margin-top: 0;
+                    font-weight: lighter;
+                    text-transform: lowercase;
+
+                }
+
+                input,select{
+                    color: var(--blackColor);
+                    border-radius: 8px;
+                    outline: none;
+                    height: 45px;
+                    width: 100%;
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    -ms-border-radius: 8px;
+                    -o-border-radius: 8px;
+                    border: 1px solid var(--bgColor);
+                    padding-left: 15px;
+                    font-size: var(--smallFontSize);
+                    border-bottom-width: 2px;
+                    transition: all .3s ease;
+                    -webkit-transition: all .3s ease;
+                    -moz-transition: all .3s ease;
+                    -ms-transition: all .3s ease;
+                    -o-transition: all .3s ease;
+
+                    &:focus,
+                    &:valid{
+                        border-color: var(--greyText);
+
+                    }
+                }
+                
+                .details{
+                    color: var(--blackColor);
+                    display: block;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                }
+
+                .samadMix{
+                    border-radius: 8px;
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    -ms-border-radius: 8px;
+                    -o-border-radius: 8px;
+                    border-collapse: collapse;
+                    width: 100%;
+                    font-size: var(--smallestFontSize);
+                    background: var(--whiteColor);
+
+                    tr:nth-child(even){
+                        background: var(--inputColor);
+                        width: 100%;
+                    }
+                    
+                    th,td{
+                        border: 1px solid var(--bgColor);
+                        padding: 0.75rem 3rem;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-transform: none;
+                        color: var(--);
+                        font-size: var(--smallestFontSize);
+                        font-weight: 500;
+                    }
+                    th{
+                        background: var(--greyText);
+                        color: var(--blackColor);
+                        font-size: var(--smallFontSize);
+                    }
+                }
+
+                .flowerMix{
+                    border-radius: 8px;
+                    -webkit-border-radius: 8px;
+                    -moz-border-radius: 8px;
+                    -ms-border-radius: 8px;
+                    -o-border-radius: 8px;
+                    border-collapse: collapse;
+                    width: 100%;
+                    font-size: var(--smallestFontSize);
+                    background: var(--whiteColor);
+
+                    tr:nth-child(even){
+                        background: var(--inputColor);
+                        width: 100%;
+                    }
+                    
+                    th,td{
+                        border: 1px solid var(--bgColor);
+                        padding: 0.75rem 2rem;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-transform: none;
+                        color: var(--);
+                        font-size: var(--smallestFontSize);
+                        font-weight: 500;
+                    }
+                    th{
+                        background: var(--greyText);
+                        color: var(--blackColor);
+                        font-size: var(--smallFontSize);
+                    }
+                }
+               
+            }
+
+            .input-mix{
+                border-radius: 8px;
+                width: 100%;
+                padding: 1rem 1rem;
+                border: .1rem solid var(--greyText);
+                input,select{
+                    margin-bottom: 15px;
+                }
+                .input-mix-btns{
+                    /* display: fle; */
+                    justify-content: space-around;
+                    .btn{
+                        width: 25%;
+                    }
+                }
+            }
+
+            .input-order{
+                border-radius: 8px;
+                padding: 1rem 1rem;
+                border: .1rem solid var(--greyText);
+            }
+        }
+
+        .submitButton{
+            
+            margin: 3rem 0;
+            justify-content:center;
+            align-items:center;
+            .btn{
+                width: 50%;
+                font-size: var(--h3FontSize);
+                height: 50px;
+            }
+        }
+
+    }
+
+    .add-message{
+        position: absolute;
+        justify-content:center;
+        align-items:center;
+        background:var(--whiteColor);
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        z-index: 1001;
+        height: 4rem;
+        width: 22rem;
+        border: 0.2rem solid var(--PrimaryColor);
+        bottom:52%;
+        right: 27%;
+        .img{
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .done-message{
+            justify-content:center;
+            align-items:center;
+            color: var(--blackColor);
+            font-size: var(--h1FontSize);
+        }
+    }
+}
+
+.details-formContainer{
+    margin: 5rem;
+    overflow: auto;
+    /* text-align: center; */
+    width: 82%;
+    height: 80%;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    justify-content:center;
+    align-items:center;
+
+    .details-icon{
+
+        position: absolute;
+        .icon{
+            position: absolute;
+            background: var(--HoverColor);
+            border:10px solid var(--whiteColor);
+            font-size: 4rem;
+            border-radius: 50%;
+            top: -20rem;
+            right: 50%;
+            transform: translate(50%);
+            z-index: 100;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            -webkit-transform: translate(50%);
+            -moz-transform: translate(50%);
+            -ms-transform: translate(50%);
+            -o-transform: translate(50%);
+        } 
+    }
+    
+    
+
+    .details-form{
+
+        position: relative;
+        border-radius: 10px;
+        overflow: auto;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        height: 100%;
+        width: 70%;
+        background: var(--HoverColor);
+        padding: 2rem 2rem;
+        
+        .formTitle{
+            font-size: var(--h1FontSize);
+            letter-spacing: .1rem;
+            margin-top: 1rem;
+            padding: .5rem 0;
+            font-weight: 800;
+            color: var(--whiteColor);
+            position: relative;
+    
+            &::before{ 
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 4px;
+            width: 80px;
+            background: linear-gradient(#bebebe,#62b122,#528e25);
+            }
+        }
+        .LandDetails{
+            text-align: center;
+            margin: 20px 0 12px 0;
+            position: relative;
+            padding: 1rem;
+            background: var(--paleGreen);
+            border-radius: 10px;
+            overflow: hidden;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            .input-box{
+                padding: .5rem;
+                box-shadow: 0 2px 3px var(--itemCardHover);
+                border-radius: 8px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items:baseline;
+                margin-bottom: 2rem;
+                width: 100%;
+                justify-content: center;
+                .details{
+                    color: rgb(228, 19, 19);
+                    font-size: var(--h2FontSize);
+                    padding: .5rem 0;
+                    font-weight: 700;
+                    color: var(--blackColor);
+                    letter-spacing: 1px;
+                }
+                .details-text{
+                    padding-left: .5rem;
+                    color: var(--textColor);
+                    font-size: var(--h3FontSize);
+                }
+            }
+            
+            
+        }
+        .circle1,.circle2{
+            position: absolute;
+            background: var(--paleGreen);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            opacity: .7;
+        }
+
+        .circle1{
+            height: 100px;
+            width: 100px;
+            top: -50px;
+            left: -50px;
+        }
+
+        .circle2{
+            height: 150px;
+            width: 150px;
+            bottom: -80px;
+            right: -70px;
+            z-index: 1;
+        }
+    }
+}
+
+/* media */
+@media screen and (max-width:1200px) {
+    .formContainer{
+        
+        .add-message{
+            bottom: 45%;
+            left: 41%;
+            width: 23rem;
+            height: 5rem;
+        }
+        
+    }
+}
+
+@media screen and (max-width:900px) {
+    .formContainer{
+        
+        .add-message{
+            bottom: 45%;
+            left: 40%;
+            width: 20rem;
+            height: 4rem;
+            .done-message{
+                font-size: var(--h2FontSize);
+            }
+        }
+        
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .formContainer{
+
+        width: 100%!important;
+        form{
+            .LandDetails{
+                max-height: 300px;
+                overflow-y: scroll;
+                .input-box{
+                    margin-bottom: 15px;
+                    width: 100%!important;
+                }
+            }
+
+            .peiceDetails{
+                .category{
+                    width: 100%;
+                }
+            }
+        }
+
+        .add-message{
+            /* height: 4rem;*/
+            width: 15rem; 
+            bottom: 45%;
+            left: 35%;
+        }
+        
+    }
+    
+}
+
+@media screen and (max-width:450px) {
+    .formContainer{
+        .add-message{
+            height: 3rem;
+            width: 11rem;
+            left: 31%;
+        }
+    }
+}
